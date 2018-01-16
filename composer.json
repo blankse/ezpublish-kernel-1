@@ -1,5 +1,5 @@
 {
-    "name": "ezsystems/ezpublish-kernel",
+    "name": "datafactory/ezpublish-kernel",
     "description": "Kernel used by ezsystems/ezplatform and derivatives. Provides the Content Repository, its APIs, and the application's Symfony framework integration.",
     "homepage": "https://ezplatform.com",
     "license": "GPL-2.0",
@@ -32,7 +32,7 @@
         "liip/imagine-bundle": "~1.0",
         "ircmaxell/password-compat": "^1.0",
         "oneup/flysystem-bundle": "^1.0|^2.0",
-        "friendsofsymfony/http-cache-bundle": "~1.2|^1.3.8",
+        "datafactory/http-cache-bundle": "~1.2|^1.3.8",
         "sensio/framework-extra-bundle": "~3.0",
         "jms/translation-bundle": "^1.0",
         "twig/twig": "~1.27|~2.0"
@@ -46,6 +46,7 @@
         "ezsystems/behatbundle": "^6.1"
     },
     "replace": {
+        "ezsystems/ezpublish-kernel": "self.version",
         "ezsystems/ezpublish": "*",
         "ezsystems/ezpublish-api": "self.version",
         "ezsystems/ezpublish-spi": "self.version"
