@@ -23,7 +23,7 @@ class CleanInstaller extends DbBasedInstaller implements Installer
     public function importData()
     {
         $this->runQueriesFromFile(
-            'vendor/ezsystems/ezpublish-kernel/data/cleandata.sql'
+            'vendor/datafactory/ezpublish-kernel/data/cleandata.sql'
         );
     }
 
