@@ -1,5 +1,5 @@
 {
-    "name": "ezsystems/ezpublish-kernel",
+    "name": "datafactory/ezpublish-kernel",
     "description": "Kernel used by ezsystems/ezplatform and derivatives. Provides the Content Repository, its APIs, and the application's Symfony framework integration.",
     "homepage": "https://ezplatform.com",
     "license": "GPL-2.0-only",
@@ -48,6 +48,7 @@
         "doctrine/dbal": "2.7.0"
     },
     "replace": {
+        "ezsystems/ezpublish-kernel": "self.version",
         "ezsystems/ezpublish": "*",
         "ezsystems/ezpublish-api": "self.version",
         "ezsystems/ezpublish-spi": "self.version"
