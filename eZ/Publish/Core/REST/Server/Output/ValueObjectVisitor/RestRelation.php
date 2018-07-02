@@ -89,17 +89,25 @@ class RestRelation extends ValueObjectVisitor
      */
     protected function getRelationTypeString($relationType)
     {
-        switch ($relationType) {
-            case RelationValue::COMMON:
-                return 'COMMON';
-            case RelationValue::EMBED:
-                return 'EMBED';
-            case RelationValue::LINK:
-                return 'LINK';
-            case RelationValue::FIELD:
-                return 'ATTRIBUTE';
+        if ($relationType > 15 || $relationType < 1) {
+            throw new \Exception('Unknown relation type ' . $relationType . '.');
         }
 
-        throw new \Exception('Unknown relation type ' . $relationType . '.');
+        $relationTypeList = [];
+
+        if (RelationValue::COMMON & $relationType) {
+            $relationTypeList[] = 'COMMON';
+        }
+        if (RelationValue::EMBED & $relationType) {
+            $relationTypeList[] = 'EMBED';
+        }
+        if (RelationValue::LINK & $relationType) {
+            $relationTypeList[] = 'LINK';
+        }
+        if (RelationValue::FIELD & $relationType) {
+            $relationTypeList[] = 'ATTRIBUTE';
+        }
+
+        return implode(',', $relationTypeList);
     }
 }
