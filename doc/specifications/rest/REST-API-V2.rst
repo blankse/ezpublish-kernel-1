@@ -639,6 +639,7 @@ XML Example
       <mainLanguageCode>eng-US</mainLanguageCode>
       <currentVersionNo>1</currentVersionNo>
       <alwaysAvailable>true</alwaysAvailable>
+      <status>PUBLISHED</status>
     </Content>
 
 JSON Example
@@ -805,7 +806,8 @@ JSON Example
         "lastModificationDate": "2012-02-12T12:30:00",
         "mainLanguageCode": "eng-US",
         "currentVersionNo": "1",
-        "alwaysAvailable": true
+        "alwaysAvailable": true,
+        "status": "PUBLISHED"
       }
     }
 
@@ -900,6 +902,7 @@ XML Example
       <mainLanguageCode>eng-US</mainLanguageCode>
       <currentVersionNo>1</currentVersionNo>
       <alwaysAvailable>true</alwaysAvailable>
+      <status>PUBLISHED</status>
     </Content>
 
 
@@ -996,6 +999,7 @@ In this example
       <mainLanguageCode>ger-DE</mainLanguageCode>
       <currentVersionNo>1</currentVersionNo>
       <alwaysAvailable>false</alwaysAvailable>
+      <status>PUBLISHED</status>
     </Content>
 
 Delete Content
@@ -6824,6 +6828,7 @@ Content XML Schema
               <xsd:element name="mainLanguageCode" type="xsd:string" />
               <xsd:element name="currentVersionNo" type="xsd:int" />
               <xsd:element name="alwaysAvailable" type="xsd:boolean" />
+              <xsd:element name="status" type="xsd:string" />
             </xsd:all>
             <xsd:attribute name="id" type="xsd:int" />
             <xsd:attribute name="remoteId" type="xsd:string" />
